@@ -35,6 +35,10 @@ dependencies {
 }
 
 
+task stage {
+   dependsOn build
+}
+
 eclipse {
 	classpath {
 		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
