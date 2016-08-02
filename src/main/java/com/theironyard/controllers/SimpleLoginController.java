@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 /**
  * Created by jeff on 8/1/16.
  */
-@CrossOrigin
 @RestController
 public class SimpleLoginController {
 
