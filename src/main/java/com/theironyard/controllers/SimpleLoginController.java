@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by jeff on 8/1/16.
@@ -35,10 +37,12 @@ public class SimpleLoginController {
     }
 
     @RequestMapping(path = "/token", method = RequestMethod.POST)
-    public String getToken(@RequestBody UserCommand command) throws Exception {
+    public Map<String, String> getToken(@RequestBody UserCommand command) throws Exception {
         User user = checkLogin(command);
 
-        return user.getToken();
+        Map<String, String> response = new HashMap<>();
+        response.put("token", user.getToken());
+        return response;
     }
 
     @RequestMapping(path = "/register", method = RequestMethod.POST)

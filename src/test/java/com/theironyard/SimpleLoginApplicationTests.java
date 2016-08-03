@@ -19,6 +19,9 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.util.HashMap;
+
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -58,6 +61,9 @@ public class SimpleLoginApplicationTests {
                 .contentType("application/json")
         ).andExpect(status().isOk()).andReturn();
 
+        //Read out the value.  Use the object mapper to translate the json to a map
+        HashMap<String, String> response = objectMapper.readValue(result.getResponse().getContentAsString(), HashMap.class);
+        assertEquals(user.getToken(), response.get("token"));
     }
 
     @Test
