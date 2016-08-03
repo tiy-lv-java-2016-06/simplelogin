@@ -2,6 +2,9 @@
 
 # SimpleLogin
 
+## Description
+Using spring boot to make a fast login system for front end
+
 ## Running
 * Locate the `jar` file in the `jar/` directory
 * Run `java -jar <jar file>`
