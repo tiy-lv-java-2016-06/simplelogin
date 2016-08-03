@@ -1,6 +1,9 @@
 [![Build Status](https://travis-ci.org/tiy-lv-java-2016-06/simplelogin.svg?branch=master)](https://travis-ci.org/tiy-lv-java-2016-06/simplelogin)
 
-# SimpleLogin
+# Simple Login
+
+## Description
+Simple login using Spring MVC rest controllers
 
 ## Running
 * Locate the `jar` file in the `jar/` directory
