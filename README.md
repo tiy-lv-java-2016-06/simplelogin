@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tiy-lv-java-2016-06/simplelogin.svg?branch=master)](https://travis-ci.org/tiy-lv-java-2016-06/simplelogin)
+
 # SimpleLogin
 
 ## Running
